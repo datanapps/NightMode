@@ -13,11 +13,11 @@
 
 
 
-####1. Create a folder app --> res --> values-night
+#### 1. Create a folder app --> res --> values-night
 
-**2. Copy and paste from  colors.xml and styles.xml from values folder*
+#### 2. Copy and paste from  colors.xml and styles.xml from values folder
 
-**3. Make changes in styles and colors*
+#### 3. Make changes in styles and colors
 
 colors.xml : 
 
@@ -45,7 +45,7 @@ styles.xml
 
           </resources>
 
-   ###4. Create Application class and add into manifest file. this application class will handle to app scrren
+   ### 4. Create Application class and add into manifest file. this application class will handle to app scrren
    
    
              public class MyApplication extends Application {
@@ -58,7 +58,7 @@ styles.xml
               }
           }
 
-**5. To implement special Activity use*
+#### 5. To implement special Activity use
 
   AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_AUTO);
   
