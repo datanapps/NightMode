@@ -13,7 +13,7 @@
 
 
 
-**1. Create a folder app --> res --> values-night*
+####1. Create a folder app --> res --> values-night
 
 **2. Copy and paste from  colors.xml and styles.xml from values folder*
 
@@ -45,7 +45,7 @@ styles.xml
 
           </resources>
 
-   **4. Create Application class and add into manifest file. this application class will handle to app scrren*
+   ###4. Create Application class and add into manifest file. this application class will handle to app scrren
    
    
              public class MyApplication extends Application {
