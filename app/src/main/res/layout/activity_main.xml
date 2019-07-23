@@ -4,13 +4,62 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".WebActivity">
 
-    <im.delight.android.webview.AdvancedWebView
-        android:id="@+id/webview"
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_mode"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="wrap_content"
+        android:text=" this is mode"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
         tools:ignore="MissingConstraints" />
+
+
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_day_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Day Mode"
+       app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_mode"
+        tools:ignore="MissingConstraints" />
+
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_night_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Night Mode"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_mode"
+        tools:ignore="MissingConstraints" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_auto_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Auto Mode"
+       app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_mode"
+        tools:ignore="MissingConstraints" />
+
+
+    <android.support.v7.widget.SwitchCompat
+        android:id="@+id/webview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Switch Toggle "
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btn_auto_mode"
+        app:layout_constraintTop_toBottomOf="@+id/tv_mode"
+        tools:ignore="MissingConstraints" />
+
 
 </android.support.constraint.ConstraintLayout>

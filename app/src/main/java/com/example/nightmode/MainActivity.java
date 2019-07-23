@@ -1,58 +1,36 @@
 package com.example.nightmode;
 
-
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.webkit.WebResourceRequest;
-import android.webkit.WebSettings;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
-
-import im.delight.android.webview.AdvancedWebView;
+import android.support.v7.app.AppCompatDelegate;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        
+        // AppCompatDelegate.MODE_NIGHT_NO,   AppCompatDelegate.MODE_NIGHT_YES, AppCompatDelegate.MODE_NIGHT_AUTO
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        AdvancedWebView webView = findViewById(R.id.webview);
+        initViews();
+    }
 
-        /*WebSettings webSettings = webView.getSettings();
-        webSettings.setJavaScriptEnabled(true);
-        webSettings.setDomStorageEnabled(true);
-        webSettings.setLoadWithOverviewMode(true);
-        webSettings.setUseWideViewPort(true);
-        webSettings.setBuiltInZoomControls(true);
-        webSettings.setDisplayZoomControls(false);
-        webSettings.setSupportZoom(true);
-        webSettings.setDefaultTextEncodingName("utf-8");*/
+    private void initViews() {
 
+        TextView textModeType = findViewById(R.id.tv_mode);
 
-       /* webView.setWebViewClient(new WebViewClient(){
+       int modeType = AppCompatDelegate.getDefaultNightMode();
 
-            @Override
-            public boolean shouldOverrideUrlLoading(WebView view, String url) {
-
-                view.loadUrl(url);
-
-                return true;
-            }
-            @Override
-            public void onPageFinished(WebView view, final String url) {
-
-            }
-        });
-*/
-
-        String html = "<div id=\"arena-live\" data-publisher=\"cna\" data-event=\"km5i\" data-version=\"2\"></div>" +
-                "<script src=\"https://go.arena.im/public/js/arenalib.js?p=cna&e=km5i\"></script>";
-
-        webView.loadDataWithBaseURL("https://www.channelnewsasia.com/", html, "text/html", "utf-8", null);
-//webView.loadUrl("https://go.arena.im/public/js/arenalib.js?p=cna&e=km5i");
-
-
-//webView.loadUrl("https://sandbox.arena.im/embed?publisher=asgard&event=mwz0&token=NDA2YjI0NjQtZTY0ZC00ZGY0LThmNzAtZmJjNTkzNzMzNGJi&v=2");
+        if (modeType == AppCompatDelegate.MODE_NIGHT_AUTO) {
+            textModeType.setText("Default Mode Type: Auto");
+        } else if (modeType == AppCompatDelegate.MODE_NIGHT_NO) {
+            textModeType.setText("Default Mode Type: Day");
+        } else if (modeType == AppCompatDelegate.MODE_NIGHT_YES) {
+            textModeType.setText("Default Mode Type: Night");
+        }
     }
 }
