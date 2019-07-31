@@ -1,4 +1,4 @@
-package com.example.nightmode;
+package com.datanapps.nightmode;
 
 import android.app.Application;
 import android.support.v7.app.AppCompatDelegate;

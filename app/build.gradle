@@ -4,7 +4,7 @@ android {
     compileSdkVersion 28
 
     defaultConfig {
-        applicationId "com.example.nightmode"
+        applicationId "com.datanapps.nightmode"
         minSdkVersion 15
         targetSdkVersion 28
         versionCode 1
