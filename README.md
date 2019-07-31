@@ -57,7 +57,7 @@ styles.xml (use DayNight theme Theme.AppCompat.DayNight.DarkActionBar)
               }
           }
 
-#### 5. To implement special Activity use
+#### 5. To implement special in Activity write code in activity otherwise write code on application.
 
   AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_AUTO);
   
