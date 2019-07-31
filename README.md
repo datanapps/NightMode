@@ -1,10 +1,12 @@
 # NightMode
 
 
+![alt text](https://github.com/datanapps/NightMode/blob/master/screens/screens.jpg)
+
 
 ### Download APK : 
 
-https://github.com/datanapps/CachingWithRetrofit/blob/master/screens/app-debug.apk
+https://github.com/datanapps/NightMode/blob/master/screens/app-debug.apk
 
 ## Implement night mode in your application.
 
