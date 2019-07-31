@@ -10,15 +10,6 @@ https://github.com/datanapps/NightMode/blob/master/screens/app-debug.apk
 
 ## Implement night mode in your application.
 
-### Benifits :
-
-1. Health & well-being 
-2. Avoid shiny screen
-3. Increase Readability
-4. Save battery life
-5. Increase application usability.
-
-
 
 #### 1. Create a folder app --> res --> values-night
 
@@ -37,7 +28,8 @@ colors.xml :
             <color name="colorWhite">#FFFFFF</color>
             <color name="colorBlack">#000000</color>
         </resources>
-styles.xml
+        
+styles.xml (use DayNight theme Theme.AppCompat.DayNight.DarkActionBar)
 
           <resources>
 
